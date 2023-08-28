@@ -1,0 +1,736 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@font-face {
+	font-family:Calibri;
+	src: url('../font/Calibri\ Regular.ttf');
+	font-weight:400;
+	font-style: normal;
+}
+@font-face {
+	font-family:Calibri;
+	src: url('../font/Calibri\ Bold.TTF.ttf');
+	font-weight:700;
+	font-style: normal;
+}
+@font-face {
+   font-family: "CentSchbook BT [Rus by me]";
+	src: url('../font/centschbook-bt-rus-by-me-bold.otf');
+	font-weight:400;
+	font-style: normal;
+}
+:root{
+	--biggest-font-size: 100px;
+
+	--h1-font-size: 44px;
+	--h2-font-size: 25px;
+	--h2-numbers-font-size: 40px;
+	--h3-font-size:30px;
+	--button-font-size:20px ;
+	--normal-p-font-size:18px ;
+	--small-font-size: 14px;
+
+
+	--container-width-pc:80%;
+	--container-width-tablet:88%;
+	--container-width-phone:94%;
+
+	--color-white:#fff;
+	--color-black:#0E0E0E;
+   --color-primary:#F36210;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:Calibri;
+}
+
+html{
+	scroll-behavior: smooth;
+   background-color: #2B2B2B;
+
+
+}
+body{
+	overflow-x: hidden;
+
+	
+}
+img,svg,
+video{
+	max-width: 100%;
+	height: auto;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+h1,h2,h3{
+	font-weight: 600;
+}
+button,
+input {
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+.container{
+	max-width: var(--container-width-pc);
+	margin: 0 auto;
+}
+.section{
+	padding: 100px 0;
+}
+
+header{
+	padding: 20px 0;
+	position: fixed;
+   width: 100%;
+   top: 0;
+   z-index: 1000;
+   left: 0;
+
+}
+
+.burger-menu{
+   width: 50px;
+   height: 20px;
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+   position: relative;
+}
+.burger-menu span:nth-child(1){
+   top: 0;
+}
+.burger-menu span:nth-child(2){
+   top: 50%;
+}
+.burger-menu span:nth-child(3){
+   bottom: 0%;
+}
+.burger-menu span{
+   width: 100%;  
+   height: 1px;
+   left: 0;
+   position: absolute;
+   background-color: #C19247;
+   transition: .3s ease-in-out;
+}
+
+.header-container{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+
+}
+.header-nav{
+   width: 100%;
+   display: flex;
+   align-items: center;
+}
+.header-list{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   margin-right: 40px;
+   justify-content: end;
+}
+.header-link:hover{
+   opacity: 0.6;
+   transition: .3s ease-in-out;
+}
+.header-link{
+   transition: .3s ease-in-out;
+   margin-left: 40px;
+   color: #C19247;
+   font-family: Calibri;
+   font-size: 20px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   font-weight: 400;
+}
+
+
+.global{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   position: relative;
+
+   background-image: url('../img/global-bacround.jpg');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+
+   color: #fff;
+}
+.global-text{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   flex-direction: column;
+}
+.global-text a::after,
+.gold-button::after{
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 100%;
+   height: 100%;
+   padding: 3px;
+   border: 1px dashed #C19247;
+}
+.global-text a:hover,
+.gold-button:hover{
+   background: #B87333;
+   transition: .3s ease-in-out;
+}
+.global-text a{
+   transition: .3s ease-in-out;
+
+   position: relative;
+   padding: 10px 20px;
+   background: #C19247;
+   color: #FFF;
+   font-size: 24px;
+   font-weight: 700;
+}
+.gold-button{
+   transition: .3s ease-in-out;
+   font-family: Calibri !important;
+   position: relative;
+   padding: 10px 40px;
+   background: #C19247 ;
+   color: #FFF !important;
+   font-size: 24px;
+   font-weight: 700;
+}
+.about-container{
+   display: grid;
+   grid-template-columns: 50% 50%;
+   align-items: center;
+   justify-content: space-between;
+}
+.about-button{
+   display: flex;
+   align-items: center;
+   gap: 20PX;
+}
+.about-button a{
+   font-family: Calibri !important;
+   display: flex;
+   align-items: center;
+   gap: 5PX;
+
+   color: #C19247 !important;
+   font-size: 25px !important;
+   font-weight: 700;
+}
+.about-buttons{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 20px;
+}
+.about-text{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 10px;
+   margin-left: 30px;
+}
+.about-text p{
+   color: #FFF;
+   text-align: center;
+   margin: 20px 0;
+   font-family: Calibri;
+   font-size: 24px;
+   font-weight: 400;
+}
+.about-text a{
+   color: #C19247;
+   font-family: 'Lobster', cursive;
+   font-size: 32px;
+   display: flex;
+   align-items: center;
+   justify-content: end;
+   width: 100%;
+   font-weight: 100;
+}
+.about-text span{
+   color: #FFF;
+   font-family: 'Lobster', cursive;
+   font-weight: 100;
+}
+.about-text h2{
+   color: #FFF;
+   font-family: "CentSchbook BT [Rus by me]";
+
+   font-size: 48px;
+   font-weight: 400;
+}
+
+
+.menu-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.manu-text h2{
+   color: #FFF;
+   text-align: center;
+
+   font-family: "CentSchbook BT [Rus by me]";
+   font-size: 48px;
+   font-weight: 400;
+   margin-bottom: 30px;
+}
+.manu-text a{
+   width: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.manu-text{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+}
+
+
+.vip-container{
+   display: grid;
+   grid-template-columns: 50% 50%;
+   gap: 20px;
+   align-items: center;
+
+}
+.vip-text{
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+}
+.text-block p{
+   color: #FFF;
+   margin-bottom: 20px;
+   font-family: Calibri;
+   font-size: 24px;
+   font-weight: 400;
+}
+.text-block span{
+   font-family: 'Lobster', cursive;
+}
+
+.vip-text h2{
+   color: #FFF;
+   text-align: center;
+   margin-bottom: 20px;
+   font-family: "CentSchbook BT [Rus by me]";
+   font-size: 48px;
+   font-weight: 400;
+}
+.vip-text p{
+   color: #FFF;
+   margin-bottom: 20px;
+   font-family: Calibri;
+   font-size: 24px;
+   font-weight: 400;
+}
+.vip-text span{
+   font-family: 'Lobster', cursive;
+
+}
+.text-block a:hover,
+.vip-text a:hover{
+   color: #B87333;
+   transition: .3s ease-in-out;
+}
+.vip-text a,
+.text-block a{
+   color: #C19247;
+   transition: .3s ease-in-out;
+
+   /* пропись */
+   font-family: 'Lobster', cursive;
+
+   font-size: 28px;
+   font-weight: 100;
+}
+
+
+.holl-slide{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+}
+.holl-container h2{
+   margin-bottom: 20px;
+   color: #FFF;
+   text-align: center;
+
+   font-family: "CentSchbook BT [Rus by me]";
+   font-size: 48px;
+   font-weight: 400;
+}
+
+.holl-container .swiper-pagination{
+   bottom: 0px !important;
+   padding: 10px;
+   background-color: #2B2B2B;
+}
+
+.swiper-pagination-bullet{
+   background-color: #C19247 !important;
+}
+
+.holl-downcontainer {
+   max-width: 700px;
+   padding: 50px 20px 20px 20px;
+   margin-top: -1px;
+   border: 1px solid #C19247;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+
+}
+.container-title{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   margin-bottom: 40px;
+}
+.container-title span{
+   color: #FFF;
+   text-align: center;
+   font-family: 'Lobster', cursive;
+
+   font-size: 40px;
+   font-weight: 100;
+}
+.container-title h3{
+   color: #FFF;
+   text-align: center;
+   font-family: "CentSchbook BT [Rus by me]";
+   font-size: 48px;
+   font-weight: 400;
+}
+.container-title h2{
+   color: #C19247;
+   font-family: "CentSchbook BT [Rus by me]";
+   font-size: 48px;
+   font-weight: 400;
+}
+.sertifcat-slide{
+   display: grid;
+   grid-template-columns: 50% 50%;
+   align-items: center;
+   padding: 0 0  40px 0 ;
+   gap: 20px;
+   justify-content: space-between;
+}
+.sertifcat-text a:hover{
+   color: #B87333;
+   transition: .3s ease-in-out;
+}
+.sertifcat-text a{
+   color: #C19247;
+   font-family: 'Lobster', cursive;
+   transition: .3s ease-in-out;
+
+   font-size: 28px;
+   font-weight: 100;
+}
+.sertifcat-container img{
+    max-height: 400px;
+}
+.trofey-container img{
+   height: 230px;
+   padding-bottom: 5px;
+}
+.trofey-container{
+   padding: 0 0 20px 0;
+}
+.sertifcat-text h5{
+   color: #FFF;
+   text-align: center;
+   font-size: 14px;
+   font-weight: 400;
+}
+.sertifcat-text h4{
+   color: #FFF;
+   text-align: center;
+   font-size: 20px;
+   font-weight: 400;
+}
+.sertifcat-text h3{
+   color: #C19247;
+   text-align: center;
+   font-size: 30px;
+   font-weight: 700;
+}
+.sertifcat-text{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   gap: 5px;
+}
+.sertifcat-text a{
+   width: 70%;
+   margin-top: 20px;
+}
+.sertifcat-text p{
+   color: #FFF;
+   margin-bottom: 20px;
+   text-align: center;
+   font-size: 24px;
+   font-weight: 700;
+}
+
+.swiper-pagination{
+   margin-top: 40px !important;
+}
+
+.sertifcat{
+   position: relative;
+}
+.swiper-button-prev5,
+.swiper-button-next5{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 50px;
+	padding: 30px 25px;
+}
+.swiper-button-prev4,
+.swiper-button-next4{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 50px;
+	padding: 30px 25px;
+}
+.swiper-button-prev3,
+.swiper-button-next3{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 50px;
+	padding: 30px 25px;
+}
+.swiper-button-prev3,
+.swiper-button-prev5,
+.swiper-button-prev4{
+   background-image: url("../img/arrow-left.svg");
+	cursor: pointer;
+   position: absolute;
+   top: 50%;
+   left: 4%;
+   transform: translate(-50%, 0%);
+
+   z-index: 100;
+}
+
+
+.swiper-button-next3,
+.swiper-button-next4,
+.swiper-button-next5{
+	background-image: url("../img/arrow-right.svg");
+	cursor: pointer;
+   position: absolute;
+   top: 50%;
+   right: 2%;
+   transform: translate(-50%, 0%);
+}
+
+
+.contact-container{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 50px;
+   border: 1px solid #C19247;
+}
+
+.contact-phone{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   color: #fff;
+
+}
+.contact-block h3{
+   color: #FFF;
+   text-align: justify;
+   font-family: Calibri;
+   font-size: 30px;
+   font-weight: 700;
+}
+.contact-block p{
+   color: #FFF;
+   text-align: justify;
+   font-family: 'Lobster', cursive;
+
+   font-size: 20px;
+   font-weight: 100;
+}
+.contact-block{
+   margin-top: 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 5px;
+}
+.contact-phone h2{
+   color: #C19247;
+   text-align: justify;
+
+   /* Заголовок */
+   font-family: "CentSchbook BT [Rus by me]";
+   font-size: 48px;
+   font-weight: 400;
+}
+.contact-border{
+   height: 350px;
+   width: 1px;
+}
+.contact-border span{
+   width: 1px;
+   display: flex;
+   align-items: center;
+   height: 100%;
+   background-color: #C19247;
+}
+.contact-social{
+   display: flex;
+   align-items: center;
+   margin-top: 40px;
+   gap: 10px;
+}
+
+.contact-input{
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+.contact-input p{
+   color: #FFF;
+   text-align: justify;
+   font-size: 20px;
+   font-weight: 400;
+}
+.contact-input{
+   display: flex;
+   align-items: center;
+   margin: 10px 0;
+}
+.contact-info{
+   display: flex;
+   margin-left: 30px;
+   flex-direction: column;
+}
+.contact-info a{
+   color: #FFF;
+
+   text-align: center;
+   font-size: 20px;
+   font-weight: 400;
+   margin-bottom: 10px;
+}
+.contact-info h3{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   width: 100%;
+   color: #C19247;
+   font-family: 'Lobster', cursive;
+   font-size: 40px;
+   font-weight: 100;
+}
+.contact-img img{
+   width: 100%;
+}
+.contact-img{
+   margin-top: 40px;
+   width: 100%;
+}
+
+.footer-bacround{
+   display: flex;
+   position: absolute;
+   top: 60%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+.footer-container{
+   padding-top: 50px;
+   border-top: 1px solid #C19247;
+   position: relative;
+   display: grid;
+   justify-content: center;
+   grid-template-columns: repeat(3,1fr);
+   gap: 20px;
+}
+.downfooter-container{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 50px;
+}
+.downfooter-container p{
+   color: #C19247;
+   font-size: 28px;
+   font-weight: 300;
+   letter-spacing: 0.56px;
+}
+.footer-text h3{
+   color: #FFF;
+   font-family: 'Lobster', cursive;
+
+   font-size: 28px;
+   font-weight: 100;
+}
+.footer-text a{
+   color: #FFF;
+
+   font-size: 20px;
+   font-weight: 400;
+}
+.footer-text{
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+   margin-top: 10px;
+}
+.footer-item{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: start;
+}
+.footer-item h2{
+   color: #FFF;
+   font-family: "CentSchbook BT [Rus by me]";
+   font-size: 32px;
+   font-weight: 700;
+}
